@@ -49,7 +49,7 @@ h1 {
 }
 
 ::placeholder {
-    color: rgb(216, 255, 44); ;
+    color: rgb(216, 255, 44); 
 
 }
 
@@ -78,8 +78,22 @@ h1 {
     margin-top: 20px;
 }
 
+.weather-container{
+    border: 1px solid lime;
+    background-color:rgb(0, 0, 0,0.6);
+    padding: 10px 20px;
+    border-radius:5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 10px auto;
+}
+
 #weather {
-    color:green;
+    color:rgb(216, 255, 44); 
+    margin-top:-5px;
 }
 
 #city{
@@ -96,31 +110,47 @@ h1 {
 .temp-container .fa-c {
     transform: translate(10px, 25px);
     font-size: 4rem;
-    color:green;
+    color:rgb(242, 255, 0);
 }
 
 #temperature {
     font-size: 4rem;
-    color:green;
+    color:greenyellow;
 }
 
-.feel {
+ .feel {
     display: flex;
     justify-content: center;
-}
+} 
 
 .feel p {
-    color:green;
+    color:rgb(0, 198, 0);
+    font-size: 1.5rem;
 }
 
 .feel .fa-c {
-    font-size: 2rem;
+    font-size: 2.5rem;
     transform: translate(10px, 25px);
-    color:green;
+    color:rgb(0, 198, 0);
+    position:relative;
+    bottom:10px;
 }
 
-.fa-c:hover {
-    color:greenyellow;
-    transition: background-color .5s;
+.temp-container:hover #temperature {
+    background-image: linear-gradient(45deg, lime,greenyellow);
+    -webkit-background-clip: text; 
+    color: transparent; 
+    transition:all ease-out 0.3s;
+  }
 
+  .feel:hover #felt {
+    background-image: linear-gradient(45deg, green, darkgreen);
+    -webkit-background-clip: text; 
+    color: transparent; 
+    transition: all ease-out 0.3s;
+}
+
+.feel:hover .fa-c {
+    color: darkgreen; 
+    transition: color ease-out 0.3s;
 }
